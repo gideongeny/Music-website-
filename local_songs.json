@@ -1,0 +1,43 @@
+[
+    {
+        "title": "YELLOW",
+        "artist": "Coldplay",
+        "path": "New folder/Coldplay - Yellow (Official Video).mp3"
+    },
+    {
+        "title": "REDRUM",
+        "artist": "21 Savage",
+        "path": "New folder/21 Savage - redrum (Official Music Video).mp3"
+    },
+    {
+        "title": "MONEY",
+        "artist": "Cardi B",
+        "path": "New folder/Cardi B _ Money (Lyrics).mp3"
+    },
+    {
+        "title": "CALM DOWN",
+        "artist": "Rema",
+        "path": "New folder/Rema - Calm Down (Official Music Video).mp3"
+    },
+    {
+        "title": "SMOOTH CRIMINAL",
+        "artist": "Artist 1",
+        "path": "New folder/Michael Jackson - Smooth Criminal (Official Video).mp3"
+    },
+    {
+        "title": "VIVA LA VIDA",
+        "artist": "Coldplay",
+        "path": "New folder/Coldplay - Viva La Vida (Official Video).mp3"
+        
+    },
+    {
+        "title": "LIKE WHAT",
+        "artist": "Cardi B",
+        "path": "New folder/Cardi B - Like What (Freestyle)  [Official Music Video].mp3"
+    },
+    {
+        "title": "NOT LIKE US",
+        "artist": "Kendrick Lamar",
+        "path": "New folder/Not Like Us.mp3"
+    }
+]

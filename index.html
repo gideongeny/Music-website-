@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melo Music</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo"><img src="Gideo beats_transparent-.png" alt="Melo Logo">MELO</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Feed</a></li>
+                    <li><a href="playlists.html">Playlists</a></li>
+                    <li><a href="statistics.html">Statistics</a></li>
+                    <li class="section-title">Your Music</li>
+                    <li><a href="favourites.html">Favourites</a></li>
+                    <li><a href="listen_later.html">Listen Later</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="podcasts.html">Podcasts</a></li>
+                    <li><a href="local_songs.html">Local Songs</a></li>
+                    <li class="section-title">Your Playlists</li>
+                    <li><a href="metalcore.html">Metalcore</a></li>
+                    <li><a href="RNB.html">Electro</a></li>
+                    <li><a href="funk.html">Funk</a></li>
+                    <li><a href="disco.html">Disco</a></li>
+                    <li><a href="create_playlist.html">Create new playlist</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="playlist-of-the-day">
+                <h2>Playlist of the day</h2>
+                <div class="slider">
+                    <img src="diamond.jpg" alt="Playlist Cover" class="slider-image active">
+                    <img src="kcee cover.jpg" alt="Playlist Cover" class="slider-image">
+                    <img src="rema cover.jpg" alt="Playlist Cover" class="slider-image">
+                    <img src="ayra-starr-in-the-album-cover-for-19-dangerous-deluxe.webp" alt="Playlist Cover" class="slider-image">
+                </div>
+            </div>
+                
+            <div class="popular-songs">
+                <!-- <div class="popular-song">
+                    <img src="ayra.jpg" alt="Commas">
+                    <p>Commas</p>
+                    <audio src="New folder/Ayra-Starr-Commas.mp3"></audio>
+                </div>
+                <div class="popular-song">
+                    <img src="Kcee.jpg" alt="Ojapiano">
+                    <p>Ojapiano</p>
+                    <audio src="New folder/Kcee - Ojapiano (Official Video).mp3"></audio>
+                </div>
+                <div class="popular-song">
+                    <img src="davido.jpg" alt="KANTE">
+                    <p>Faint</p>
+                    <audio src="New folder/Davido - KANTE (Official Video) ft. Fave.mp3"></audio>
+                </div> -->
+            </div>
+
+            <div class="trimmed-video">
+                <video controls id="currentVideo">
+                    <source src="New folder/Tyler ICU & Tumelo.za - Mnike (Visualizer) ft. DJ Maphorisa, Nandipha808, Ceeka RSA & Tyron Dee.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <!-- <div class="playlists">
+                <h3>Playlists</h3>
+                <ul>
+                    <li>Workout at the gym</li>
+                    <li>Tracks without lyrics</li>
+                    <li>Funny stuff</li>
+                    <li>Careful driving vibes</li>
+                    <li>Philosophy during walking</li>
+                </ul>
+            </div>
+             -->
+            <div class="promo">
+                <p>Check the power of Melo</p>
+                <button>Upgrade</button>
+            </div>
+        </main>
+
+        <aside class="right-sidebar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for songs...">
+                <button id="searchButton">Search</button>
+            </div>
+            
+            <div class="new-releases">
+                <h3>New Releases</h3>
+                <ul>
+                    <li><a href="#" data-audio="New folder/TitoM, Yuppe and Burna Boy - Tshwala Bam Remix [Ft. S.N.E] (Official Video).mp3">Burna boy ft Tito</a></li>
+                    <li><a href="#" data-audio="New folder/Kcee - Ojapiano (Official Video).mp3">Kcee</a></li>
+                </ul>
+            </div>
+            
+            <div class="listen-more-often">
+                <h3>Listen More Often</h3>
+                <ul>
+                    <li><a href="#" data-audio="New folder/Davido - KANTE (Official Video) ft. Fave.mp3">Davido</a></li>
+                    <li><a href="#" data-audio="New folder/Rema - Calm Down (Official Music Video).mp3">Rema</a></li>
+                    <li><a href="#" data-audio="New folder/Diamond Platnumz - Komasava (Music Video) feat. Khalil Harisson & Chley.mp3">Diamond Platinumz</a></li>
+                </ul>
+            </div>
+            
+            <div class="favourite-artists">
+                <h3>Favourite Artists</h3>
+                <ul>
+                    <li><a href="#" data-audio="New folder/Davido - KANTE (Official Video) ft. Fave.mp3">Davido</a></li>
+                    <li><a href="#" data-audio="New folder/Rema - Calm Down (Official Music Video).mp3">Rema</a></li>
+                    <li><a href="#" data-audio="New folder/Diamond Platnumz - Komasava (Music Video) feat. Khalil Harisson & Chley.mp3">Diamond Platinumz</a></li>
+                    <li><a href="#" data-audio="New folder/Not Like Us.mp3">Kendrick Lamar</a></li>
+                    <li><a href="#" data-audio="New folder/Ayra-Starr-Commas.mp3">Ayra Starr</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <footer class="footer">
+        <div class="now-playing">
+            <img id="footerSongImage" src="default-song.jpg" alt="Now Playing" style="width: 50px; height: 50px; margin-right: 10px;">
+            <div>
+                <p id="nowPlayingText"></p>
+                <div class="song-bar-container">
+                    <span id="currentTime">0:00</span>
+                    <input type="range" id="songProgressBar" min="0" max="100" value="0">
+                    <span id="totalTime">0:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prevButton">Previous</button>
+            <button id="playButton">Play</button>
+            <button id="pauseButton">Pause</button>
+            <button id="nextButton">Next</button>
+            <input type="range" id="volumeControl" min="0" max="100" value="50">
+        </div>
+    </footer>
+    
+
+    <script src="script-2.js"></script>
+</body>
+</html>
