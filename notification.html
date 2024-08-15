@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let title = "MY TITLE";
+        let body = "This is a notification body";
+        let icon = "Gideo beats-.png";
+       
+      function showNotification(title,body,icon){
+        if ("Notification" in window) {
+            
+            if (Notification.permission == "granted") {
+                
+                new Notification(
+                    title, {
+                    body: body,
+                    icon: icon,
+                })
+            } else {
+                Notification.requestPermission()
+                    .then(function (permission) {
+                        if (permission == "granted") {
+                            let notification = new Notification(
+                                title, {
+                                body: body,
+                                icon: icon,
+                            }
+                            )
+                        }
+                    })
+            }
+        } else {
+            console.log("eror");
+
+        }
+      }
+
+              
+    </script>
+    <script src=""></script>
+
+</html>

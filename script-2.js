@@ -125,6 +125,7 @@ function next() {
 
 audio.addEventListener("ended", function () {
     next(); 
+    showNotification(songs[currentsongindex].title,songs[currentsongindex].artist,songs[currentsongindex].image)
 });
 
 function previous() {
@@ -169,3 +170,32 @@ playButton.addEventListener("click", function () {
 songProgressBar.addEventListener('input', () => {
     audio.currentTime = (songProgressBar.value / 100) * audio.duration;
 });
+function showNotification(title,body,icon){
+    if ("Notification" in window) {
+        
+        if (Notification.permission == "granted") {
+            
+            new Notification(
+                title, {
+                body: body,
+                icon: icon,
+            })
+        } else {
+            Notification.requestPermission()
+                .then(function (permission) {
+                    if (permission == "granted") {
+                        let notification = new Notification(
+                            title, {
+                            body: body,
+                            icon: icon,
+                        }
+                        )
+                    }
+                })
+        }
+    } else {
+        console.log("eror");
+
+    }
+  }
+  
