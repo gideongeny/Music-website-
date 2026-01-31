@@ -241,8 +241,8 @@ function renderSongCards(tracks, container, source) {
                 return;
             }
             if (source === 'lastfm') {
-                // Search Deezer for the Last.fm hit to get audio
-                renderSearch(track.title + ' ' + track.artist.name);
+                // Background search on Deezer to find audio for the Last.fm metadata
+                searchAndPlay(track.title + ' ' + track.artist.name);
                 return;
             }
             playTrack({ title, artist: { name: artist }, album: { cover_medium: img }, preview: stream });
@@ -250,6 +250,21 @@ function renderSongCards(tracks, container, source) {
 
         container.appendChild(card);
     });
+}
+
+/**
+ * Background Search and Auto-Play (for sources without direct audio like Last.fm)
+ */
+async function searchAndPlay(query) {
+    try {
+        const response = await fetch(`${CONFIG.PROXY}${encodeURIComponent(CONFIG.DEEZER_BASE + '/search?q=' + query + '&limit=1')}`);
+        const data = await response.json();
+        if (data.data && data.data.length > 0) {
+            playTrack(data.data[0]);
+        }
+    } catch (error) {
+        console.error('Last.fm playback search error:', error);
+    }
 }
 
 /**
