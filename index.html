@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <!-- Font Awesome for Premium Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Sidebar Navigation -->
@@ -18,24 +20,31 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#"><i class="fas fa-compass"></i> Discover</a></li>
-                    <li><a href="#"><i class="fas fa-music"></i> Library</a></li>
-                    <li><a href="#"><i class="fas fa-microphone"></i> Artists</a></li>
+                    <li><a href="#" class="nav-link active" data-page="home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="discover"><i class="fas fa-compass"></i> Discover</a>
+                    </li>
+                    <li><a href="#" class="nav-link" data-page="library"><i class="fas fa-music"></i> Library</a></li>
+                    <li><a href="#" class="nav-link" data-page="artists"><i class="fas fa-microphone"></i> Artists</a>
+                    </li>
                 </ul>
 
                 <p class="section-title">Your Collection</p>
                 <ul>
-                    <li><a href="favourites.html"><i class="fas fa-heart"></i> Favourites</a></li>
-                    <li><a href="playlists.html"><i class="fas fa-list"></i> Playlists</a></li>
-                    <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="#" class="nav-link" data-page="favourites"><i class="fas fa-heart"></i> Favourites</a>
+                    </li>
+                    <li><a href="#" class="nav-link" data-page="playlists"><i class="fas fa-list"></i> Playlists</a>
+                    </li>
+                    <li><a href="#" class="nav-link" data-page="history"><i class="fas fa-history"></i> History</a></li>
                 </ul>
 
                 <p class="section-title">Playlists</p>
                 <ul id="playlistList">
-                    <li><a href="#"><i class="fas fa-compact-disc"></i> Top 100 Global</a></li>
-                    <li><a href="#"><i class="fas fa-compact-disc"></i> Afrobeat Fusion</a></li>
-                    <li><a href="#"><i class="fas fa-compact-disc"></i> Chill Vibes</a></li>
+                    <li><a href="#" class="nav-link" data-page="top100"><i class="fas fa-compact-disc"></i> Top 100
+                            Global</a></li>
+                    <li><a href="#" class="nav-link" data-page="afrobeat"><i class="fas fa-compact-disc"></i> Afrobeat
+                            Fusion</a></li>
+                    <li><a href="#" class="nav-link" data-page="chill"><i class="fas fa-compact-disc"></i> Chill
+                            Vibes</a></li>
                 </ul>
             </nav>
         </aside>
@@ -48,7 +57,8 @@
                     <input type="text" id="searchInput" placeholder="Search for tracks, artists, or albums...">
                 </div>
                 <div class="user-profile">
-                    <img src="https://ui-avatars.com/api/?name=Mukhtar&background=38bdf8&color=fff" alt="Profile" style="width: 40px; border-radius: 50%;">
+                    <img src="https://ui-avatars.com/api/?name=Mukhtar&background=38bdf8&color=fff" alt="Profile"
+                        style="width: 40px; border-radius: 50%;">
                 </div>
             </header>
 
@@ -58,7 +68,8 @@
                     <p>EXCLUSIVE PLAYLIST</p>
                     <h2>Editor's Choice: Global Hits</h2>
                     <p>Discover the biggest tracks from around the world, updated daily.</p>
-                    <button class="play-pause-btn" style="width: 120px; border-radius: 100px; height: 48px; border: none; font-weight: 700; cursor: pointer;">
+                    <button class="play-pause-btn"
+                        style="width: 120px; border-radius: 100px; height: 48px; border: none; font-weight: 700; cursor: pointer;">
                         <i class="fas fa-play"></i> PLAY NOW
                     </button>
                 </div>
@@ -94,7 +105,9 @@
                     <h4 id="playerTrackName">Select a song</h4>
                     <p id="playerArtistName">Artist</p>
                 </div>
-                <button class="fav-btn" style="background: transparent; border: none; color: var(--text-muted); cursor: pointer;"><i class="far fa-heart"></i></button>
+                <button class="fav-btn"
+                    style="background: transparent; border: none; color: var(--text-muted); cursor: pointer;"><i
+                        class="far fa-heart"></i></button>
             </div>
 
             <div class="player-controls">
@@ -117,7 +130,9 @@
             <div class="volume-controls">
                 <i class="fas fa-volume-up"></i>
                 <div class="volume-bar" style="position: relative; cursor: pointer;">
-                    <div id="volumeFill" style="position: absolute; left: 0; top: 0; height: 100%; background: var(--text-primary); width: 70%; border-radius: 2px;"></div>
+                    <div id="volumeFill"
+                        style="position: absolute; left: 0; top: 0; height: 100%; background: var(--text-primary); width: 70%; border-radius: 2px;">
+                    </div>
                 </div>
                 <i class="fas fa-expand"></i>
             </div>
@@ -129,4 +144,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
